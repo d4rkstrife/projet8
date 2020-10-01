@@ -100,7 +100,6 @@
 				// Generate an ID
 				var newId = "";
 				var charset = "0123456789";
-
 				for (var i = 0; i < 6; i++) {
 					newId += charset.charAt(Math.floor(Math.random() * charset.length));
 				}
@@ -156,4 +155,4 @@
 	// Export to window
 	window.app = window.app || {};
 	window.app.Store = Store;
-})(window);
+})(window);//version1
