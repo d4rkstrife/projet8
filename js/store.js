@@ -96,18 +96,15 @@
 			localStorage[this._dbName] = JSON.stringify(data);
 			callback.call(this, todos);
 		} else {
-			let newId;
-			do {
-				// Generate an ID
-				/*	var newId = "";
-					var charset = "0123456789";
-					for (var i = 0; i < 6; i++) {
-						newId += charset.charAt(Math.floor(Math.random() * charset.length));
-					}*/
-				newId = Math.floor(Math.random() * 1000000).toString();
-			} while (todos.find(element => element.id === newId));
 
 
+			// Generate an unique ID
+			let newId = Date.now().toString() + Math.floor(Math.random() * 10).toString();
+			/*	var newId = "";
+				var charset = "0123456789";
+				for (var i = 0; i < 6; i++) {
+					newId += charset.charAt(Math.floor(Math.random() * charset.length));
+				}*/
 			// Assign an ID			
 			updateData.id = parseInt(newId);
 			todos.push(updateData);
