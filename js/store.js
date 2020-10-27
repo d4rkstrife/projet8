@@ -98,13 +98,14 @@
 		} else {
 
 
-			// Generate an unique ID
-			let newId = Date.now().toString() + Math.floor(Math.random() * 10).toString();
+
 			/*	var newId = "";
 				var charset = "0123456789";
 				for (var i = 0; i < 6; i++) {
 					newId += charset.charAt(Math.floor(Math.random() * charset.length));
 				}*/
+			// Generate an unique ID
+			let newId = Date.now().toString() + Math.floor(Math.random() * 100).toString();
 			// Assign an ID			
 			updateData.id = parseInt(newId);
 			todos.push(updateData);
@@ -122,6 +123,7 @@
 	Store.prototype.remove = function (id, callback) {
 		var data = JSON.parse(localStorage[this._dbName]);
 		var todos = data.todos;
+		//ancien code 
 		/*	var todoId;
 	
 			for (var i = 0; i < todos.length; i++) {
@@ -135,6 +137,7 @@
 					todos.splice(i, 1);
 				}
 			}*/
+		//nouveau code 
 		for (var i = 0; i < todos.length; i++) {
 			if (todos[i].id == id) {
 				todos.splice(i, 1);

@@ -3,6 +3,8 @@
 
 <head>
 	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Application permettant de generer une liste de taches de manière rapide">
 	<title>To-do list app</title>
 	<link rel="icon" href="favicon.png">
 	<link rel="stylesheet" href="node_modules/todomvc-common/base.css">
@@ -13,11 +15,15 @@
 	<section class="todoapp">
 		<header class="header">
 			<h1>todos</h1>
-			<input class="new-todo" placeholder="What needs to be done?" autofocus>
+			<label for="new_todo">
+				<input class="new-todo" id="new-todo" placeholder="What needs to be done?" autofocus>
+			</label>
 		</header>
 		<section class="main">
+
 			<input class="toggle-all" id="toggle-all" type="checkbox">
 			<label for="toggle-all">Mark all as complete</label>
+
 			<ul class="todo-list"></ul>
 		</section>
 		<footer class="footer">
