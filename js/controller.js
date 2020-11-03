@@ -157,10 +157,10 @@
 	 */
 	Controller.prototype.removeItem = function (id) {
 		var self = this;
-		var items;
+		/*var items;
 		self.model.read(function (data) {
 			items = data;
-		});
+		});*/
 		self.model.remove(id, function () {
 			self.view.render('removeItem', id);
 		});
